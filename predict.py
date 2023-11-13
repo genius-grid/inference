@@ -620,7 +620,7 @@ class Predictor(BasePredictor):
             }
 
             if self.is_lora:
-                sdxl_kwargs["cross_attention_kwargs"] = {"scale": 0}
+                sdxl_kwargs["cross_attention_kwargs"] = {"scale": lora_scale}
 
             output = pipe(**common_args, **sdxl_kwargs)
 
