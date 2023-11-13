@@ -344,14 +344,14 @@ class Predictor(BasePredictor):
             description="LoRA additive scale. Only applicable on trained models.",
             ge=0.0,
             le=1.0,
-            default=0.6,
+            default=0.8,
         ),
         mask_blur_amount: float = Input(
             description="Amount of blur to apply to the mask.", default=8.0
         ),
         face_padding: float = Input(
             description="Amount of padding (as percentage) to add to the face bounding box.",
-            default=1,
+            default=2,
         ),
         face_resize_to: int = Input(
             description="Resize the face bounding box to this size (in pixels).",
